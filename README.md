@@ -8,14 +8,25 @@ The design principles of Beanbox are:
 - Fast: boot times should be in the 100-200ms region
 - Secure: both you and your LLM can go rouge in the Beanbox without causing harm to the host machine
 
-> :warning: **Early days**: expect rough edges
+
+# Demo
+[![demo video](https://img.youtube.com/vi/-FKUa0U0qAU/0.jpg)](https://www.youtube.com/watch?v=-FKUa0U0qAU)
 
 # Run on your machine
 I've so far only ran Beanbox on aarch64-apple-darwin but it should work on linux (x86_64) as well.
 
+> :warning: **Early days**: expect rough edges
+
 ## tl;dr
-There's currently no official release so the way to run this is by building from source. To do this:
-Run `brew install libkrun podman just` and run `just build`.
+There's currently no official release so the way to run this is by building from source. To do this run:
+
+```bash
+`brew install libkrun podman just`
+```
+and then
+```bash
+just build
+```
 
 ## I wanna know more
 Beanbox relies on the [libkrun](https://github.com/containers/libkrun) virtualisation framwork for creating VMs. On linux libkrun uses the KVM hypervisor and on macOS the Hypervisor.Framework. Libkrun is available on homebrew: `brew install libkrun`.
@@ -62,8 +73,11 @@ python3 main.py
 ```
 
 It opens the browser based terminal which is connected to the Beanbox microVM and should get a view like this in your terminal:
-```bash
->
-```
 Just go ahead and prompt the llm.
+```bash
+> what os is this?
+```
 
+# Acknowledgments
+This project is largely inspired by [krunvm](https://github.com/containers/krunvm) and build on top of [libkrun](https://github.com/containers/libkrun).
+[Gotty](https://github.com/sorenisanerd/gotty) deserves also a special mention for the terminal sharing.
