@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch GoTTY",
+            "type": "go",
+            "buildFlags": "-tags=dev",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "args": ["-a", "127.0.0.1", "-w", "${env:SHELL}"]
+        },
+        {
+            "name": "Launch Chrome",
+            "type": "chrome",
+            "url": "http://127.0.0.1:8080",
+            "webRoot": "${workspaceFolder}/js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js",
+                "!**/node_modules/**"
+            ],
+        },
+    ]
+}
