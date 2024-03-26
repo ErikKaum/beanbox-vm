@@ -21,7 +21,7 @@ I've so far only ran Beanbox on aarch64-apple-darwin but it should work on linux
 There's currently no official release so the way to run this is by building from source. To do this run:
 
 ```bash
-`brew install libkrun podman just`
+brew install libkrun podman just
 ```
 and then
 ```bash
@@ -74,7 +74,7 @@ python3 main.py
 
 It opens the browser based terminal which is connected to the Beanbox microVM and should get a view like this in your terminal:
 Just go ahead and prompt the llm.
-```bash
+```
 > what os is this?
 ```
 
